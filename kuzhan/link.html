@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<!-- saved from url=(0046)http://www.jikedaohang.com/qianduan.html#part8 -->
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>极客导航-程序员自己的导航</title>
+
+		<meta name="author" content="ellaliu">
+		<meta name="keywords" content="极客导航ˇ程序员导航,程序猿导航,Android导航,IOS导航,Android网址导航,IOS程序员导航,IT导航,Android程序员导航,IOS程序员导航,Html5网址导航,前端导航,前端程序猿导航,码农导航,面试,设计导航网站">
+		<meta name="description" content="极客导航ˇ程序员导航,程序猿导航,Android导航,IOS导航,Android网址导航,IOS程序员导航,IT导航,Android程序员导航,IOS程序员导航,Html5网址导航,前端导航,前端程序猿导航,码农导航,面试,设计导航网站">
+		<link rel="shortcut icon" href="http://www.jikedaohang.com/jk.png">
+		<link type="text/css" rel="stylesheet" href="reset.css">
+		<link type="text/css" rel="stylesheet" href="jquery-ui-1.10.3.custom.min.css">
+		<link type="text/css" rel="stylesheet" href="swiper-3.3.1.min.css">
+		<link type="text/css" rel="stylesheet" href="xinbancommon.css">
+		<script src="hm.js"></script>
+		<script type="text/javascript" src="jquery-1.12.3.min.js"></script>
+		<script type="text/javascript">
+			try {
+				var AG_onLoad = function(func) {
+					if(document.readyState === "complete" || document.readyState === "interactive") func();
+					else if(document.addEventListener) document.addEventListener("DOMContentLoaded", func);
+					else if(document.attachEvent) document.attachEvent("DOMContentLoaded", func)
+				};
+				var AG_removeElementById = function(id) {
+					var element = document.getElementById(id);
+					if(element && element.parentNode) {
+						element.parentNode.removeChild(element);
+					}
+				};
+				var AG_removeElementBySelector = function(selector) {
+					if(!document.querySelectorAll) {
+						return;
+					}
+					var nodes = document.querySelectorAll(selector);
+					if(nodes) {
+						for(var i = 0; i < nodes.length; i++) {
+							if(nodes[i] && nodes[i].parentNode) {
+								nodes[i].parentNode.removeChild(nodes[i]);
+							}
+						}
+					}
+				};
+				var AG_each = function(selector, fn) {
+					if(!document.querySelectorAll) return;
+					var elements = document.querySelectorAll(selector);
+					for(var i = 0; i < elements.length; i++) {
+						fn(elements[i]);
+					};
+				};
+				var AG_removeParent = function(el, fn) {
+					while(el && el.parentNode) {
+						if(fn(el)) {
+							el.parentNode.removeChild(el);
+							return;
+						}
+						el = el.parentNode;
+					}
+				};
+			} catch(ex) {
+				console.error('Error executing AG js: ' + ex);
+			}
+		</script>
+		<script type="text/javascript" src="jquery-ui-1.10.3.custom.min.js"></script>
+		<script type="text/javascript" src="swiper-3.3.1.jquery.min.js"></script>
+		<script type="text/javascript" src="common.js"></script>
+
+		<script type="text/javascript">
+			$(function() {
+				$("#search_list li").click(function() {
+					$(this).addClass("active");
+					$(this).siblings().removeClass("active");
+					$("#search_btn").val($(this).text());
+					$("#search_btn").attr("url", $(this).attr("url"));
+				});
+				$("#search_btn").click(function() {
+					var content = $("#search_content").val();
+					var url = $(this).attr("url") + content;
+					var $a = $("#linkTo");
+					$a[0].href = url;
+					$("span", $a).click();
+				});
+
+				$('#search_content').bind('keypress', function(event) {
+					if(event.keyCode == "13") {
+						var content = $("#search_content").val();
+						if(content == null) {
+							return;
+						}
+						var url = $("#search_btn").attr("url") + content;
+						var $a = $("#linkTo");
+						$a[0].href = url;
+						$("span", $a).click();
+					}
+				});
+
+				var availableTags = [
+					"ActionScript",
+					"AppleScript",
+					"Asp",
+					"BASIC",
+					"C",
+					"C++",
+					"Clojure",
+					"COBOL",
+					"ColdFusion",
+					"Erlang",
+					"Fortran",
+					"Groovy",
+					"Haskell",
+					"Java",
+					"JavaScript",
+					"Lisp",
+					"Perl",
+					"哎哎",
+					"Python",
+					"哎",
+					"Scala",
+					"Scheme"
+				];
+				//            $( "#search_content" ).autocomplete({
+				//                source: availableTags,
+				//                select: function( event, ui ) {
+				//                    if(ui.item){
+				//                        alert(ui.item.value);
+				//                    }else{
+				//                        alert(this.value);
+				//                    }
+				//                }
+				//            });
+			});
+			//
+			//        $(document).ready(function () {
+			//            $(document).keyup(function (evnet) {
+			//                if (evnet.keyCode == '13') {
+			//                    var content = $("#search_content").val();
+			//                    var url = $(this).attr("url")+content;
+			//                    var $a =$("#linkTo");
+			//                    alert(url)
+			//                    $a[0].href=url;
+			//                }
+			//            });
+			//
+			//        });
+		</script>
+
+		<script>
+			var _hmt = _hmt || [];
+			(function() {
+				var hm = document.createElement("script");
+				hm.src = "//hm.baidu.com/hm.js?af56dfbc035c657de3388b6e9dde0d51";
+				var s = document.getElementsByTagName("script")[0];
+				s.parentNode.insertBefore(hm, s);
+			})();
+		</script>
+
+	</head>
+
+	<body>
+	
+			<div class="content body_width">
+				<div class="ofh" style="margin-bottom: 60px;margin-right: 100px;">
+			
+					<div class="search_div" ">
+						<ul id="search_list">
+							<li class="active" url="https://www.baidu.com/s?wd=">百度</li>
+							<li url="https://www.google.com/search?q=">谷歌</li>
+							<li url="http://cn.bing.com/search?q=">必应</li>
+							<li url="http://fanyi.baidu.com/?aldtype=16047#en/zh/">翻译</li>
+							<li url="https://github.com/search?utf8=✓&amp;q=">Github</li>
+							<li url="http://music.baidu.com/search?key=">音乐</li>
+							<li url="http://image.baidu.com/search/index?tn=baiduimage&amp;word=">图片</li>
+						</ul>
+						<div>
+							<input type="text" id="search_content" placeholder="请输入搜索内容">
+							<input id="search_btn" type="button" url="https://www.baidu.com/s?wd=" value="百度">
+
+						</div>
+					</div>
+				</div>
+
+				<div class="ofh">
+					<div class="left">
+						<ul class="nav">
+							<li class="one">
+								<a href="link.html#part1">常用网站</a>
+							</li>
+							<li class="two">
+								<a href="link.html#part2">工具大全</a>
+							</li>
+							<li class="three">
+								<a href="link.html#part3">经典博客</a>
+							</li>
+							<li class="four">
+								<a href="link.html#part4">进阶之路</a>
+							</li>
+							<li class="one">
+								<a href="link.html#part5">源码下载</a>
+							</li>
+							<li class="two">
+								<a href="link.html#part6">跳槽指南</a>
+							</li>
+							<li class="three">
+								<a href="link.html#part7">精品网站</a>
+							</li>
+							<li class="four">
+								<a href="link.htmlpart8">其他</a>
+							</li>
+						</ul>
+					</div>
+					<div class="right">
+						<ul class="info">
+							<li class="one">
+								<h2 class="first">常用网站</h2>
+								<div>
+									<span><a href="https://www.google.com/" target="_blank">Google</a></span>
+									<span><a href="https://www.baidu.com/" target="_blank">百度</a></span>
+									<span><a href="http://www.github.com/" target="_blank">Github</a></span>
+									<span><a href="http://stackoverflow.com/" target="_blank">Stackoverflow</a></span>
+									<span><a href="https://segmentfault.com/t/ios" target="_blank">Segmentfault</a></span>
+									<span><a href="http://www.oschina.net/" target="_blank">开源中国</a></span>
+									<span><a href="http://www.csdn.net/" target="_blank">Csdn</a></span>
+									<span><a href="http://gold.xitu.io/welcome?utm_source=jikedaohang&amp;utm_medium=word&amp;utm_content=juejin&amp;utm_campaign=q3_website" target="_blank">掘金</a></span>
+									<span><a href="http://www.jianshu.com/" target="_blank">简书</a></span>
+									<span><a href="http://reactnative.cn/" target="_blank">ReactNative中文网</a></span>
+									<span><a href="http://collect.w3ctrain.com/" target="_blank">前端收藏夹</a></span>
+									<span><a href="https://dwqs.gitbooks.io/frontenddevhandbook/content/" target="_blank">前端开发手册</a></span>
+									<span><a href="http://w3school.com.cn/" target="_blank">W3school</a></span>
+									<span><a href="http://css.doyoe.com/" target="_blank">css参考手册</a></span>
+									<span><a href="http://nec.netease.com/" target="_blank">网易开源NEC</a></span>
+									<span><a href="https://admire.so/" target="_blank">每天发现好网站</a></span>
+									<span><a href="http://www.9miao.com/forum.php" target="_blank">9秒社团</a></span>
+									<span><a href="http://html5ify.com/fks/" target="_blank">前端知识</a></span>
+									<span><a href="https://www.qianduan.net/" target="_blank">前端观察</a></span>
+									<span><a href="http://www.html-js.com/" target="_blank">html5-js</a></span>
+									<span><a href="https://cnodejs.org/" target="_blank">node.js</a></span>
+									<span><a href="http://www.daqianduan.com/" target="_blank">大前端</a></span>
+									<span><a href="https://www.javascripting.com/" target="_blank">前端框架库</a></span>
+									<span><a href="http://mobdevgroup.com/platform/html5/resources" target="_blank">国外前端站</a></span>
+									<span><a href="http://www.kaka12345.net/"  target="_blank">美女写真</a></span>
+								</div>
+								<a id="part2" style="height: 60px;display: block;margin-top: -60px;"></a>
+							</li>
+
+							<li class="two">
+								<h2>工具大全</h2>
+								<div>
+									<span><a style="color: #00a21b" href="http://www.agent-nydus.com/a?a=qJOlofqu" target="_blank">去国外看看</a></span>
+
+									<span><a href="http://fanyi.baidu.com/?aldtype=16047#auto/zh/" target="_blank">翻译</a></span>
+									<span><a href="http://www.bejson.com/">Bejson</a></span>
+									<span><a href="http://rgb.phpddt.com/" target="_blank">颜色转换</a></span>
+									<span><a href="http://tool.lu/regex/" target="_blank">正则匹配</a></span>
+									<span><a href="http://tool.lu/base64image/" target="_blank">图片Base64编码</a></span>
+									<span><a href="http://tool.oschina.net/hexconvert" target="_blank">进制转换</a></span>
+									<span><a href="http://tool.chinaz.com/Tools/unixtime.aspx" target="_blank">时间转换</a></span>
+									<span><a href="http://tool.lu/sql/" target="_blank">sql语句</a></span>
+									<span><a href="http://www.ip138.com/" target="_blank">IP查询</a></span>
+									<span><a href="http://html5test.com/" target="_blank">Html5测试</a></span>
+									<span><a href="https://jsfiddle.net/" target="_blank">js在线调试</a></span>
+									<span><a href="http://www.sassmeister.com/" target="_blank">sass在线编辑</a></span>
+									<span><a href="http://devdocs.io/" target="_blank">在线api</a></span>
+									<span><a href="http://pxtoem.com/" target="_blank">px转em</a></span>
+									<span><a href="http://runjs.cn/" target="_blank">js在线</a></span>
+									<span><a href="http://www.cnblogs.com/lhb25/archive/2012/09/27/10-css3-online-generator-tools.html" target="_blank">css3代码生成</a></span>
+
+									<span><a href="http://exmail.qq.com/login" target="_blank">腾讯企业邮</a></span>
+									<span><a href="https://mail.google.com/mail/" target="_blank">谷歌邮箱</a></span>
+									<span><a href="http://mail.163.com/" target="_blank">网易邮箱</a></span>
+									<span><a href="http://www.cockos.com/licecap/" target="_blank">GIF录制</a></span>
+
+								</div>
+								<a id="part3" style="height: 60px;display: block;margin-top: -60px;"></a>
+							</li>
+							<li class="three">
+								<h2>经典博客</h2>
+								<div>
+
+									<span><a href="http://www.zhangxinxu.com/wordpress/" target="_blank">张鑫旭</a></span>
+									<span><a href="http://www.lcode.org/" target="_blank">江清清</a></span>
+
+								</div>
+								<a id="part4" style="height: 60px;display: block;margin-top: -60px;"></a>
+							</li>
+
+							<li class="four">
+								<h2>进阶之路</h2>
+
+								<div>
+									<span><a href="http://www.imooc.com/course/list?c=html" target="_blank">慕课网</a></span>
+									<span><a href="http://www.jikexueyuan.com/course/html/" target="_blank">极客学院</a></span>
+									<span><a href="https://ke.qq.com/course/list?mt=1001&amp;st=2004" target="_blank">腾讯课堂</a></span>
+									<span><a href="http://study.163.com/find.htm#/courselist?ct=8" target="_blank">网易云课堂</a></span>
+									<span><a href="http://mooc.guokr.com/career/?dept_id=73&amp;order=hot" target="_blank">mocc学院</a></span>
+									<span><a href="http://www.maiziedu.com/course/web-px/" target="_blank">麦子学院</a></span>
+									<span><a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/" target="_blank">Git学习</a></span>
+									<span><a href="http://www.jianshu.com/p/1e402922ee32" target="_blank">markdown用法</a></span>
+
+								</div>
+								<a id="part5" style="height: 60px;display: block;margin-top: -60px;"></a>
+							</li>
+
+							<li class="one">
+								<h2>源码下载</h2>
+								<div>
+
+									<span><a href="http://www.jsdaima.com/" target="_blank">js代码大全</a></span>
+									<span><a href="http://www.yyyweb.com/" target="_blank">前端里</a></span>
+									<span><a href="http://www.51xuediannao.com/js/gg/" target="_blank">懒人建站</a></span>
+									<span><a href="http://js.ncong.com/" target="_blank">恩聪前端网</a></span>
+								</div>
+								<a id="part6" style="height: 60px;display: block;margin-top: -60px;"></a>
+							</li>
+							<li class="two">
+								<h2>跳槽指南</h2>
+								<div>
+									<span><a href="http://www.nowcoder.com/contestRoom" target="_blank">牛客网</a></span>
+									<span><a href="http://www.zhaopin.com/" target="_blank">智联招聘</a></span>
+									<span><a href="http://www.51job.com/" target="_blank">前程无忧</a></span>
+									<span><a href="http://www.lagou.com/" target="_blank">拉勾网</a></span>
+									<span><a href="https://www.liepin.com/" target="_blank">猎聘网</a></span>
+									<span><a href="http://www.chinahr.com/tianjin/" target="_blank">中华英才网</a></span>
+									<span><a href="http://blog.jobbole.com/" target="_blank">伯乐在线</a></span>
+									<span><a href="http://www.dajie.com/" target="_blank">大街网</a></span>
+									<span><a href="http://job.csdn.net/" target="_blank">csdn招聘</a></span>
+									<span><a href="http://www.neitui.me/" target="_blank">内推网</a></span>
+									<span><a href="https://100offer.com/" target="_blank">100offer</a></span>
+									<!--<span><a href="http://www.wealink.com/"  target="_blank">若林网</a></span>-->
+									<!--<span><a href="http://www.zhenai.com/"  target="_blank">珍爱网</a></span>-->
+									<!--<span><a href="http://www.vipbaihe.com/"  target="_blank">百合网</a></span>-->
+									<!--<span><a href="http://www.youyuan.com/"  target="_blank">有缘网</a></span>-->
+									<!--<span><a href="http://www.jiayuan.com/"  target="_blank">世纪佳缘</a></span>-->
+								</div>
+								<a id="part7" style="height: 60px;display: block;margin-top: -60px;"></a>
+							</li>
+							<li class="three">
+								<h2>精品网站</h2>
+								<div>
+									<span><a href="http://www.w3cschool.cn/" target="_blank">w3cschool</a></span>
+									<span><a href="http://geekniu.com/" target="_blank">极牛</a></span>
+									<span><a href="https://www.juhe.cn/" target="_blank">聚合接口</a></span>
+									<span><a href="http://www.ycpai.com/default.html" target="_blank">缘创派</a></span>
+									<span><a href="http://www.cyzone.cn/" target="_blank">创业邦</a></span>
+									<span><a href="http://www.yixieshi.com/" target="_blank">互联网一些事</a></span>
+									<span><a href="https://mart.coding.net/projects" target="_blank">码市</a></span>
+									<span><a href="http://shixian.com/" target="_blank">实现</a></span>
+									<span><a href="http://tieba.baidu.com/" target="_blank">百度贴吧</a></span>
+									<span><a href="http://www.tianya.cn/" target="_blank">天涯</a></span>
+									<span><a href="http://www.zhihu.com/" target="_blank">知乎</a></span>
+									<span><a href="http://www.guokr.com/" target="_blank">果壳</a></span>
+									<span><a href="http://www.infoq.com/" target="_blank">infoQ</a></span>
+									<span><a href="http://www.iheima.com/" target="_blank">i黑马</a></span>
+									<span><a href="http://36kr.com/" target="_blank">36kr</a></span>
+									<span><a href="http://cy.ncss.org.cn/" target="_blank">大学生创业网</a></span>
+									<span><a href="https://www.itjuzi.com/" target="_blank">it桔子</a></span>
+									<span><a href="http://www.iyiou.com/" target="_blank">亿欧网</a></span>
+									<span><a href="http://www.geekpark.net/" target="_blank">极客公园</a></span>
+								</div>
+								<a id="part8" style="height: 60px;display: block;margin-top: -60px;"></a>
+							</li>
+							<li class="four">
+								<h2>其他</h2>
+								<div>
+									<span><a href="http://www.zhuangbi.info/" target="_blank">装逼图片</a></span>
+									<span><a href="http://www.bibb.cn/" target="_blank">装逼宝典</a></span>
+									<span><a href="http://www.lovepua.com/" target="_blank">把妹技术</a></span>
+									<span><a href="https://www.calm.com/" target="_blank">减压网站</a></span>
+									<span><a href="http://zhidao.baidu.com/s/daily/2013-11-24/1387540950.html" target="_blank">注意颈椎</a></span>
+									<span><a href="http://www.muscles.com.cn/" target="_blank">别忘锻炼</a></span>
+
+									<span><a href="http://www.php100.com/html/webkaifa/Linux/2009/1106/3485.html" target="_blank">linux命令大全</a></span>
+									<span><a href="https://coding.net/" target="_blank">代码托管</a></span>
+									<span><a href="http://www.ubuuk.com/" target="_blank">有吧设计</a></span>
+
+									<span><a href="http://www.umeng.com/" target="_blank">友盟</a></span>
+									<span><a href="http://www.mob.com/" target="_blank">ShareSdk</a></span>
+									<span><a href="https://open.weixin.qq.com/" target="_blank">微信开发平台</a></span>
+									<span><a href="http://lbs.amap.com/" target="_blank">高德地图API</a></span>
+									<span><a href="http://lbsyun.baidu.com/" target="_blank">百度地图API</a></span>
+									<span><a href="http://lines.frvr.com/" target="_blank">程序员小游戏</a></span>
+									<!--<span><a   target="_blank">查看网页源代码</a></span>-->
+
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="footer">
+				<div style="width: 30%;float: left;">&nbsp;</div>
+				<div class="state">
+					<p>
+						<!--<a href="http://www.jikedaohang.com/about.htm" target="_blank" class="link">关于</a>-->
+						<!--&nbsp;|&nbsp;-->
+						<!--<a target="_blank" class="link">QQ群:569185172</a>-->
+					</p>
+					<p style="color: #FFFFFF">站点数据来自极客，导航如有侵权，请告知</p>
+				</div>
+				<!--<div class="ems-cnpl">
+					<img style="width: 100px" height="100px" src="chengxuyuan.jpg" alt="">
+					<span>关注程序猿那点事,一个神奇的公众号</span>
+				</div>-->
+			</div>
+			<span class="gotop" style="display: block;">返回顶部</span>
+			<script type="application/javascript">
+				var mySwiper = new Swiper('.swiper-container', {
+					autoplay: 3000,
+					pagination: '.swiper-pagination',
+					nextButton: '.swiper-button-next',
+					prevButton: '.swiper-button-prev'
+				});
+			</script>
+
+		</div>
+	</body>
+
+</html>
