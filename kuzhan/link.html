@@ -51,28 +51,34 @@
 			$(function() {
 				var len = 0;
 				$("#search_list li").click(function() {
-				    $(this).addClass("active");
+					$(this).addClass("active");
 					$(this).siblings().removeClass("active");
-					$("#search_content").attr('placeholder','请输入搜索内容');
+					$("#search_content").attr('placeholder', '请输入搜索内容');
+					if($('#search_list li.active').attr('data-type') == 'location'){
+					$("#search_btn").val('搜索');
+					}else{
 					$("#search_btn").val($(this).text());
 					$("#search_btn").attr("url", $(this).attr("url"));
+					}
 				});
+				var flag = true;
 				$("#search_btn").click(function() {
 					var content = $("#search_content").val();
-					if($('#search_list li.active').attr('data-type')=='location'){	
+					if($('#search_list li.active').attr('data-type') == 'location') {
 						len++;
-						content?sessionStorage.setItem('key',content):false;
-						    $("#search_content").attr('placeholder',sessionStorage.getItem('key'));
-							$("#search_content").val('');
-							var flag = true;
-			                    if(flag){
-									flag = window.find(sessionStorage.getItem('key'));
-								}else{
-									len = 0;   
-									sessionStorage.setItem('key','请输入搜索内容')
-								}
-						
-					}else{
+						content ? sessionStorage.setItem('key', content) : false;
+						$("#search_content").attr('placeholder', sessionStorage.getItem('key'));
+						$("#search_content").val('');
+						if(flag) {
+							flag = window.find(sessionStorage.getItem('key'));
+						} else {
+							len = 0;
+							//$("#search_content").attr('placeholder', '请输入搜索内容');
+							//sessionStorage.setItem('key', '请输入搜索内容');
+							flag = true;
+						}
+
+					} else {
 						var url = $(this).attr("url") + content;
 						var $a = $("#linkTo");
 						$a[0].href = url;
@@ -474,7 +480,7 @@
 					<span>关注程序猿那点事,一个神奇的公众号</span>
 				</div>-->
 		</div>
-		<span class="gotop" style="display: block;">返回顶部</span>
+		<a href="link.html#part1"><span class="gotop"  style="display: block;">返回顶部</span></a>
 		<script type="application/javascript">
 			var mySwiper = new Swiper('.swiper-container', {
 				autoplay: 3000,
@@ -482,7 +488,6 @@
 				nextButton: '.swiper-button-next',
 				prevButton: '.swiper-button-prev'
 			});
-			
 		</script>
 
 		</div>
