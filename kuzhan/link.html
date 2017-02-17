@@ -53,12 +53,22 @@
 				$("#search_list li").click(function() {
 				    $(this).addClass("active");
 					$(this).siblings().removeClass("active");
+<<<<<<< HEAD
 					$("#search_content").attr('placeholder','请输入搜索内容');
+=======
+					$("#search_content").attr('placeholder', '请输入搜索内容');
+					if($('#search_list li.active').attr('data-type') == 'location'){
+					$("#search_btn").val('搜索');
+					}else{
+>>>>>>> dcc7485a3afe6ad910b4fa6b968c8b2e63a59166
 					$("#search_btn").val($(this).text());
 					$("#search_btn").attr("url", $(this).attr("url"));
+					}
 				});
+				var flag = true;
 				$("#search_btn").click(function() {
 					var content = $("#search_content").val();
+<<<<<<< HEAD
 					if($('#search_list li.active').attr('data-type')=='location'){	
 						len++;
 						content?sessionStorage.setItem('key',content):false;
@@ -73,6 +83,23 @@
 								}
 						
 					}else{
+=======
+					if($('#search_list li.active').attr('data-type') == 'location') {
+						len++;
+						content ? sessionStorage.setItem('key', content) : false;
+						$("#search_content").attr('placeholder', sessionStorage.getItem('key'));
+						$("#search_content").val('');
+						if(flag) {
+							flag = window.find(sessionStorage.getItem('key'));
+						} else {
+							len = 0;
+							//$("#search_content").attr('placeholder', '请输入搜索内容');
+							//sessionStorage.setItem('key', '请输入搜索内容');
+							flag = true;
+						}
+
+					} else {
+>>>>>>> dcc7485a3afe6ad910b4fa6b968c8b2e63a59166
 						var url = $(this).attr("url") + content;
 						var $a = $("#linkTo");
 						$a[0].href = url;
@@ -155,7 +182,11 @@
 						<li url="http://fanyi.baidu.com/?aldtype=16047#en/zh/">翻译</li>
 						<li url="https://github.com/search?utf8=✓&amp;q=">Github</li>
 						<li url="http://music.baidu.com/search?key=">音乐</li>
+<<<<<<< HEAD
 						<li url="http://image.baidu.com/search/index?tn=baiduimage&amp;word=">图片</li>
+=======
+						<li url="http://image.baidu.com/search/index?tn=baiduimage&amp;word=">图片</li>
+>>>>>>> dcc7485a3afe6ad910b4fa6b968c8b2e63a59166
 						<!--<li data-url="" id="local">本站</li>-->
 						<li data-type="location" id="local">本站</li>
 					</ul>
@@ -349,7 +380,11 @@
 							<h2>设计</h2>
 							<div>
 								<span><a href="http://www.ubuuk.com/" target="_blank">UB设计</a></span>
+<<<<<<< HEAD
 								<span><a href="http://niutuku.com/" target="_blank">牛图库</a></span>
+=======
+								<span><a href="http://niutuku.com/" target="_blank">牛图库</a></span>
+>>>>>>> dcc7485a3afe6ad910b4fa6b968c8b2e63a59166
 								<span><a href="http://www.zhuangbi.info/" target="_blank">装逼图片</a></span>
 								<span><a  href="http://www.iconfont.cn/plus" target="_blank">阿里图标</a></span>
 								<span><a href="http://girlydrop.com/"  target="_blank">girlydrop</a></span>
@@ -474,7 +509,11 @@
 					<span>关注程序猿那点事,一个神奇的公众号</span>
 				</div>-->
 		</div>
+<<<<<<< HEAD
 		<span class="gotop" style="display: block;">返回顶部</span>
+=======
+		<a href="link.html#part1"><span class="gotop"  style="display: block;">返回顶部</span></a>
+>>>>>>> dcc7485a3afe6ad910b4fa6b968c8b2e63a59166
 		<script type="application/javascript">
 			var mySwiper = new Swiper('.swiper-container', {
 				autoplay: 3000,
@@ -482,7 +521,10 @@
 				nextButton: '.swiper-button-next',
 				prevButton: '.swiper-button-prev'
 			});
+<<<<<<< HEAD
 			
+=======
+>>>>>>> dcc7485a3afe6ad910b4fa6b968c8b2e63a59166
 		</script>
 
 		</div>
